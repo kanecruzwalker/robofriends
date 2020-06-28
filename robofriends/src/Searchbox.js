@@ -3,7 +3,7 @@ import React, {Fragment} from "react";
 const SearchBox = () => {
     return(
         <Fragment>
-            <h1>It's search time</h1>
+            <input type="search" placeholder="search robofriends" />
         </Fragment>
     )
 }
