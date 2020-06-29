@@ -3,12 +3,17 @@ import CardList from "./Cardlist";
 import { robots } from "./robots";
 import SearchBox from "./Searchbox";
 
-const state = {
-    robots: robots,
-    searchfield: ""
-}
 
 class App extends Component {
+    constructor() {
+        super()
+        this.state = {
+            robots: robots,
+            searchfield: ""
+        }
+    }
+
+
     render(){
         return(
         <Fragment>
