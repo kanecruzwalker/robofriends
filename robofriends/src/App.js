@@ -13,13 +13,17 @@ class App extends Component {
         }
     }
 
+    onSearchChange(event){
+        console.log(event.target.value);
+    }
+
 
     render(){
         return(
         <Fragment>
             <h1>Welcome to Robot friends</h1>
-            <SearchBox/>
-            <CardList robots={robots}/>
+            <SearchBox searchChange={this.onSearchChange}/>
+            <CardList robots={this.state.robots}/>
         </Fragment>
         )
     }
