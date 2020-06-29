@@ -31,10 +31,8 @@ class App extends Component {
         const fileterRoboFriends = robots.filter(robot => {
             return robot.name.toLowerCase().includes(searchfield.toLowerCase());
         })
-        if (robots.length === 0){
-            return <h1>Loading</h1>
-        }else{
-        return(
+        return robots.length === 0 ? <h1>Loading</h1> :
+        (
         <Fragment>
             <h1>Welcome to Robot friends</h1>
             <SearchBox searchChange={this.onSearchChange}/>
@@ -45,6 +43,5 @@ class App extends Component {
         )
         }
     }
-}
 
 export default App;
