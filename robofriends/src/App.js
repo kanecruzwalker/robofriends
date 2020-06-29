@@ -1,6 +1,7 @@
 import React, {Fragment, Component} from "react";
 import CardList from "./Cardlist";
 import SearchBox from "./Searchbox";
+import Scroll from "./Scroll";
 
 
 class App extends Component {
@@ -36,7 +37,9 @@ class App extends Component {
         <Fragment>
             <h1>Welcome to Robot friends</h1>
             <SearchBox searchChange={this.onSearchChange}/>
+            <Scroll>
             <CardList robots={fileterRoboFriends}/>
+            </Scroll>
         </Fragment>
         )
         }
