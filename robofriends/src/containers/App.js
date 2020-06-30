@@ -4,11 +4,12 @@ import CardList from "../components/Cardlist";
 import SearchBox from "../components/Searchbox";
 import Scroll from "../components/Scroll";
 import ErrorBoundry from "../components/ErrorBoundry";
-import setSearchField from "../actions";
+import {setSearchField} from "../actions";
+
 
 const mapStateToProps = state => {
     return{
-        searchField: state.searchRobots.searchField
+        searchField: state.searchField
     }
 }
 
@@ -18,8 +19,6 @@ const mapDispatchToProps = (dispatch) => {
 
     }
 }
-}
-
 class App extends Component {
     constructor() {
         super()
@@ -38,8 +37,7 @@ class App extends Component {
 
 
     onSearchChange = (event) => {
-        const userSearch = event.target.value
-        this.setState({ searchfield: userSearch})
+        this.setState({ searchfield: event.target.value})
     }
     
     
