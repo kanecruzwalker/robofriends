@@ -35,13 +35,15 @@ class App extends Component {
         return isPending === 0 ? <h1>Loading</h1> :
         (
         <Fragment>
-            <h1>Welcome to Robot friends</h1>
+            <div className='tc'>
+            <h1 className='f1'>Welcome to Robot friends</h1>
             <SearchBox searchChange={onSearchChange}/>
             <Scroll>
                 <ErrorBoundry>
                     <CardList robots={fileterRoboFriends}/>
                 </ErrorBoundry>
             </Scroll>
+            </div>
         </Fragment>
         )
     }
